@@ -5,12 +5,12 @@ function figureHandle = spectrumPlot(frequencyPoints, powerValues, plotTitle)
   
   figureHandle = figure;
   
-  title(plotTitle);
-  
-  xlabel('Power (dB)');
-  ylabel('Frequency (MHz)');
-  
   plot(frequencyPoints./1e6, powerValues);
   
   axis([min(frequencyPoints)/1e6 max(frequencyPoints)/1e6 min(powerValues) max(powerValues)]);
+  
+  title(plotTitle);
+  
+  ylabel('Power (dB)');
+  xlabel('Frequency (MHz)');
 end
